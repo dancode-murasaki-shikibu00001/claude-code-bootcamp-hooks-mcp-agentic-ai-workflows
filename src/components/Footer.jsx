@@ -1,4 +1,35 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
+
+const CookiePolicyTooltip = () => {
+  const [visible, setVisible] = useState(false);
+
+  return (
+    <div className="relative">
+      <a
+        className="group relative hover:text-white transition-colors duration-300 cursor-pointer"
+        onMouseEnter={() => setVisible(true)}
+        onMouseLeave={() => setVisible(false)}
+      >
+        <span className="relative z-10">Cookie Policy</span>
+        <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
+      </a>
+      {visible && (
+        <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-3 w-72 bg-gray-800 border border-gray-700 rounded-xl shadow-2xl p-4 z-50 text-left">
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-gray-800"></div>
+          <h5 className="text-white font-semibold text-sm mb-2">Cookie Policy</h5>
+          <p className="text-gray-300 text-xs leading-relaxed">
+            We use cookies to enhance your browsing experience, analyse site
+            traffic, and personalise content. By using JobPortal, you consent
+            to our use of essential, analytics, and preference cookies. You can
+            manage or withdraw your consent at any time through your browser
+            settings.
+          </p>
+        </div>
+      )}
+    </div>
+  );
+};
 
 const Footer = () => {
   return (
@@ -149,10 +180,7 @@ const Footer = () => {
                 <span className="relative z-10">Terms of Service</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
               </a>
-              <a className="group relative hover:text-white transition-colors duration-300">
-                <span className="relative z-10">Cookie Policy</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-purple-600/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -inset-2"></div>
-              </a>
+              <CookiePolicyTooltip />
               <Link
                 to="/contact"
                 className="group relative hover:text-white transition-colors duration-300"
