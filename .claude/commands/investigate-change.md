@@ -132,9 +132,9 @@ Save the report to `change-investigation-report.md` in the project root with thi
 ```markdown
 # 🔎 Change Investigation Report
 
-**Target**: [file path / function / search term as provided by user]  
-**Investigation Date**: [today's date]  
-**Repository**: [git remote URL or repo name]  
+**Target**: [file path / function / search term as provided by user]
+**Investigation Date**: [today's date]
+**Repository**: [git remote URL or repo name]
 **Branch**: [current branch name]
 
 ---
@@ -159,8 +159,8 @@ Save the report to `change-investigation-report.md` in the project root with thi
 | 1   | [name] | [email] | [X]     | [Y] ([Z]%)  | [date]             | [date]            |
 | 2   | ...    | ...     | ...     | ...         | ...                | ...               |
 
-**Primary Owner**: [Author with most lines currently in the file]  
-**Most Recent Contributor**: [Author of the latest commit]  
+**Primary Owner**: [Author with most lines currently in the file]
+**Most Recent Contributor**: [Author of the latest commit]
 **CODEOWNERS**: [Entry if exists, or "Not configured"]
 
 ---
